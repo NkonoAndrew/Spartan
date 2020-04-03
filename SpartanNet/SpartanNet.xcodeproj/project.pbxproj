@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		455432B62433CB4B00662DC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455432B52433CB4B00662DC0 /* AppDelegate.swift */; };
+		455432B82433CB4B00662DC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455432B72433CB4B00662DC0 /* SceneDelegate.swift */; };
+		455432BA2433CB4B00662DC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455432B92433CB4B00662DC0 /* ViewController.swift */; };
+		455432BD2433CB4B00662DC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455432BB2433CB4B00662DC0 /* Main.storyboard */; };
+		455432BF2433CB4D00662DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455432BE2433CB4D00662DC0 /* Assets.xcassets */; };
+		455432C22433CB4D00662DC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455432C02433CB4D00662DC0 /* LaunchScreen.storyboard */; };
+		457285B22433DCF5003BDEAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457285B12433DCF5003BDEAF /* LoginViewController.swift */; };
+		457285B42433DD0E003BDEAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457285B32433DD0E003BDEAF /* HomeViewController.swift */; };
+		457285B62433DD25003BDEAF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457285B52433DD25003BDEAF /* SignUpViewController.swift */; };
+		457285B82433E712003BDEAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 457285B72433E712003BDEAF /* GoogleService-Info.plist */; };
+		5F8B3B64CAF94307C3EAB348 /* Pods_SpartanNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7A3E14E7923C2D434F8EAF /* Pods_SpartanNet.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A7A3E14E7923C2D434F8EAF /* Pods_SpartanNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455432B22433CB4B00662DC0 /* SpartanNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartanNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		455432B52433CB4B00662DC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		455432B72433CB4B00662DC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		455432B92433CB4B00662DC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		455432BC2433CB4B00662DC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		455432BE2433CB4D00662DC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		455432C12433CB4D00662DC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		455432C32433CB4D00662DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457285B12433DCF5003BDEAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		457285B32433DD0E003BDEAF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		457285B52433DD25003BDEAF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		457285B72433E712003BDEAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4721A4FA5808042AE4F03BF /* Pods-SpartanNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanNet.release.xcconfig"; path = "Target Support Files/Pods-SpartanNet/Pods-SpartanNet.release.xcconfig"; sourceTree = "<group>"; };
+		B49915F36F304E17BFE13E5A /* Pods-SpartanNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanNet.debug.xcconfig"; path = "Target Support Files/Pods-SpartanNet/Pods-SpartanNet.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		455432AF2433CB4B00662DC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F8B3B64CAF94307C3EAB348 /* Pods_SpartanNet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FF86250DF6B2BF6788F07A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A7A3E14E7923C2D434F8EAF /* Pods_SpartanNet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		455432A92433CB4B00662DC0 = {
+			isa = PBXGroup;
+			children = (
+				455432B42433CB4B00662DC0 /* SpartanNet */,
+				455432B32433CB4B00662DC0 /* Products */,
+				FEC7D2D9A0820F9E26167F42 /* Pods */,
+				3FF86250DF6B2BF6788F07A2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		455432B32433CB4B00662DC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				455432B22433CB4B00662DC0 /* SpartanNet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		455432B42433CB4B00662DC0 /* SpartanNet */ = {
+			isa = PBXGroup;
+			children = (
+				455432B52433CB4B00662DC0 /* AppDelegate.swift */,
+				455432B72433CB4B00662DC0 /* SceneDelegate.swift */,
+				455432CA2433CB7B00662DC0 /* Model */,
+				455432CC2433CBA400662DC0 /* View */,
+				455432CD2433CBAB00662DC0 /* Controller */,
+				455432BE2433CB4D00662DC0 /* Assets.xcassets */,
+				455432C02433CB4D00662DC0 /* LaunchScreen.storyboard */,
+				457285B72433E712003BDEAF /* GoogleService-Info.plist */,
+				455432C32433CB4D00662DC0 /* Info.plist */,
+			);
+			path = SpartanNet;
+			sourceTree = "<group>";
+		};
+		455432CA2433CB7B00662DC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		455432CC2433CBA400662DC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				455432BB2433CB4B00662DC0 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		455432CD2433CBAB00662DC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				455432B92433CB4B00662DC0 /* ViewController.swift */,
+				457285B12433DCF5003BDEAF /* LoginViewController.swift */,
+				457285B32433DD0E003BDEAF /* HomeViewController.swift */,
+				457285B52433DD25003BDEAF /* SignUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEC7D2D9A0820F9E26167F42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B49915F36F304E17BFE13E5A /* Pods-SpartanNet.debug.xcconfig */,
+				B4721A4FA5808042AE4F03BF /* Pods-SpartanNet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		455432B12433CB4B00662DC0 /* SpartanNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 455432C62433CB4D00662DC0 /* Build configuration list for PBXNativeTarget "SpartanNet" */;
+			buildPhases = (
+				192DC034437875CED9D413FE /* [CP] Check Pods Manifest.lock */,
+				455432AE2433CB4B00662DC0 /* Sources */,
+				455432AF2433CB4B00662DC0 /* Frameworks */,
+				455432B02433CB4B00662DC0 /* Resources */,
+				49AC3143B0085EAA2BF6997A /* [CP] Embed Pods Frameworks */,
+				1112486AAD8A2D488A2E89D6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpartanNet;
+			productName = SpartanNet;
+			productReference = 455432B22433CB4B00662DC0 /* SpartanNet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		455432AA2433CB4B00662DC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Bella Wei";
+				TargetAttributes = {
+					455432B12433CB4B00662DC0 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 455432AD2433CB4B00662DC0 /* Build configuration list for PBXProject "SpartanNet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 455432A92433CB4B00662DC0;
+			productRefGroup = 455432B32433CB4B00662DC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				455432B12433CB4B00662DC0 /* SpartanNet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		455432B02433CB4B00662DC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455432C22433CB4D00662DC0 /* LaunchScreen.storyboard in Resources */,
+				457285B82433E712003BDEAF /* GoogleService-Info.plist in Resources */,
+				455432BF2433CB4D00662DC0 /* Assets.xcassets in Resources */,
+				455432BD2433CB4B00662DC0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1112486AAD8A2D488A2E89D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpartanNet/Pods-SpartanNet-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpartanNet/Pods-SpartanNet-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpartanNet/Pods-SpartanNet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		192DC034437875CED9D413FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpartanNet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49AC3143B0085EAA2BF6997A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpartanNet/Pods-SpartanNet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpartanNet/Pods-SpartanNet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpartanNet/Pods-SpartanNet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		455432AE2433CB4B00662DC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457285B62433DD25003BDEAF /* SignUpViewController.swift in Sources */,
+				457285B42433DD0E003BDEAF /* HomeViewController.swift in Sources */,
+				457285B22433DCF5003BDEAF /* LoginViewController.swift in Sources */,
+				455432BA2433CB4B00662DC0 /* ViewController.swift in Sources */,
+				455432B62433CB4B00662DC0 /* AppDelegate.swift in Sources */,
+				455432B82433CB4B00662DC0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		455432BB2433CB4B00662DC0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				455432BC2433CB4B00662DC0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		455432C02433CB4D00662DC0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				455432C12433CB4D00662DC0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		455432C42433CB4D00662DC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		455432C52433CB4D00662DC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		455432C72433CB4D00662DC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B49915F36F304E17BFE13E5A /* Pods-SpartanNet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpartanNet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sjsu.SpartanNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		455432C82433CB4D00662DC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4721A4FA5808042AE4F03BF /* Pods-SpartanNet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpartanNet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sjsu.SpartanNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		455432AD2433CB4B00662DC0 /* Build configuration list for PBXProject "SpartanNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455432C42433CB4D00662DC0 /* Debug */,
+				455432C52433CB4D00662DC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		455432C62433CB4D00662DC0 /* Build configuration list for PBXNativeTarget "SpartanNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455432C72433CB4D00662DC0 /* Debug */,
+				455432C82433CB4D00662DC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 455432AA2433CB4B00662DC0 /* Project object */;
+}
