@@ -17,6 +17,8 @@
 		457285B42433DD0E003BDEAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457285B32433DD0E003BDEAF /* HomeViewController.swift */; };
 		457285B62433DD25003BDEAF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457285B52433DD25003BDEAF /* SignUpViewController.swift */; };
 		457285B82433E712003BDEAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 457285B72433E712003BDEAF /* GoogleService-Info.plist */; };
+		45BF35ED2438531F00359AF7 /* PostEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF35EC2438531F00359AF7 /* PostEventViewController.swift */; };
+		45BF35EF2438534D00359AF7 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF35EE2438534D00359AF7 /* ContactViewController.swift */; };
 		5F8B3B64CAF94307C3EAB348 /* Pods_SpartanNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7A3E14E7923C2D434F8EAF /* Pods_SpartanNet.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		457285B32433DD0E003BDEAF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		457285B52433DD25003BDEAF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		457285B72433E712003BDEAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45BF35EC2438531F00359AF7 /* PostEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEventViewController.swift; sourceTree = "<group>"; };
+		45BF35EE2438534D00359AF7 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		B4721A4FA5808042AE4F03BF /* Pods-SpartanNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanNet.release.xcconfig"; path = "Target Support Files/Pods-SpartanNet/Pods-SpartanNet.release.xcconfig"; sourceTree = "<group>"; };
 		B49915F36F304E17BFE13E5A /* Pods-SpartanNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanNet.debug.xcconfig"; path = "Target Support Files/Pods-SpartanNet/Pods-SpartanNet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +118,8 @@
 				457285B12433DCF5003BDEAF /* LoginViewController.swift */,
 				457285B32433DD0E003BDEAF /* HomeViewController.swift */,
 				457285B52433DD25003BDEAF /* SignUpViewController.swift */,
+				45BF35EC2438531F00359AF7 /* PostEventViewController.swift */,
+				45BF35EE2438534D00359AF7 /* ContactViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,9 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				457285B62433DD25003BDEAF /* SignUpViewController.swift in Sources */,
+				45BF35EF2438534D00359AF7 /* ContactViewController.swift in Sources */,
 				457285B42433DD0E003BDEAF /* HomeViewController.swift in Sources */,
 				457285B22433DCF5003BDEAF /* LoginViewController.swift in Sources */,
 				455432BA2433CB4B00662DC0 /* ViewController.swift in Sources */,
+				45BF35ED2438531F00359AF7 /* PostEventViewController.swift in Sources */,
 				455432B62433CB4B00662DC0 /* AppDelegate.swift in Sources */,
 				455432B82433CB4B00662DC0 /* SceneDelegate.swift in Sources */,
 			);

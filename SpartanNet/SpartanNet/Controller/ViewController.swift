@@ -12,16 +12,16 @@ import GoogleSignIn
 
 class ViewController: UIViewController, GIDSignInDelegate{
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabbarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+            self.present(tabbarVC, animated: false, completion: nil)
+        }
+    }
     
-    if let error = error {
-        print("\(error.localizedDescription)")
-    } else {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabbarVC = storyboard.instantiateViewController(withIdentifier: "TabBarIdentifier") as! UITabBarController
-        self.present(tabbarVC, animated: false, completion: nil)
-    }
-    }
-
     @IBOutlet weak var GidSigninButton: GIDSignInButton!
     
     override func viewDidLoad() {
@@ -34,17 +34,17 @@ class ViewController: UIViewController, GIDSignInDelegate{
     }
     
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
-  withError error: NSError!) {
-    if (error == nil) {
-      // Perform any operations on signed in user here.
-      // ...
-    } else {
-      print("\(error.localizedDescription)")
+                withError error: NSError!) {
+        if (error == nil) {
+            // Perform any operations on signed in user here.
+            // ...
+        } else {
+            print("\(error.localizedDescription)")
+        }
     }
-}
-
-
-
-
+    
+    
+    
+    
 }
 

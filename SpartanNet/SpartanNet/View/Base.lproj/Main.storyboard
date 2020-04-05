@@ -173,64 +173,73 @@
             </objects>
             <point key="canvasLocation" x="1657" y="-430"/>
         </scene>
-        <!--View Controller-->
+        <!--Post Event View Controller-->
         <scene sceneID="bHs-j5-Rke">
             <objects>
-                <viewController id="OL8-6e-53q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostEventViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OL8-6e-53q" customClass="PostEventViewController" customModule="SpartanNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Psh-bC-QEl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Iterm 2 " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQ6-rv-hOu">
-                                <rect key="frame" x="146" y="204" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQ6-rv-hOu">
+                                <rect key="frame" x="146" y="204" width="213" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo8-rN-SK4">
+                                <rect key="frame" x="32" y="180" width="77" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PostButton"/>
+                                <connections>
+                                    <action selector="touchPost:" destination="OL8-6e-53q" eventType="touchUpInside" id="aU9-wL-ZPC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="COn-Wu-x9n"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Qi-57-Wz5"/>
+                    <connections>
+                        <outlet property="contextField" destination="UQ6-rv-hOu" id="U26-fr-cGL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTb-Rn-us3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="1582"/>
+            <point key="canvasLocation" x="364" y="1596"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="eZa-FG-J0V">
             <objects>
-                <viewController id="OWa-CL-0Z4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OWa-CL-0Z4" customClass="HomeViewController" customModule="SpartanNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w6c-nS-nsY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Yf5-2O-tSw">
-                                <rect key="frame" x="105" y="205" width="246" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fND-uD-RKm">
+                                <rect key="frame" x="136" y="453" width="80" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="just for testing " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvO-DZ-PIL">
-                                <rect key="frame" x="94" y="332" width="126" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="KYx-tW-eXQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="jcr-ym-ps2"/>
+                    <connections>
+                        <outlet property="contextLabel" destination="fND-uD-RKm" id="qLe-Kn-ibY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coZ-es-1BQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365" y="907"/>
+            <point key="canvasLocation" x="363.768115942029" y="906.69642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact View Controller-->
         <scene sceneID="lAh-OQ-Vku">
             <objects>
-                <viewController id="FaX-hd-hzU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FaX-hd-hzU" customClass="ContactViewController" customModule="SpartanNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ErM-Yy-TV2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="364" y="2336"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="fXz-bV-dLs">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarIdentifier" id="cbe-hC-4UF" customClass="HomeViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cbe-hC-4UF" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="smV-44-LRG"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="clc-pp-twR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
