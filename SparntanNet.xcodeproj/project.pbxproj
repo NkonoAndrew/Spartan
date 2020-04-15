@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4597A53C2446BA6C009D2C09 /* PostEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597A53B2446BA6C009D2C09 /* PostEventViewController.swift */; };
+		4597A53E2446BCF9009D2C09 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597A53D2446BCF9009D2C09 /* HomeTableViewCell.swift */; };
+		4597A5402446BD2B009D2C09 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597A53F2446BD2B009D2C09 /* Post.swift */; };
+		45C228A824468901009BD298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228A724468901009BD298 /* AppDelegate.swift */; };
+		45C228AA24468901009BD298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228A924468901009BD298 /* SceneDelegate.swift */; };
+		45C228AC24468901009BD298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228AB24468901009BD298 /* ViewController.swift */; };
+		45C228AF24468901009BD298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C228AD24468901009BD298 /* Main.storyboard */; };
+		45C228B124468903009BD298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C228B024468903009BD298 /* Assets.xcassets */; };
+		45C228B424468903009BD298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C228B224468903009BD298 /* LaunchScreen.storyboard */; };
+		45C228BD24468BA5009BD298 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45C228BC24468BA4009BD298 /* GoogleService-Info.plist */; };
+		45C228C32446969B009BD298 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C22446969B009BD298 /* HomeViewController.swift */; };
+		45C228C5244696AF009BD298 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C4244696AF009BD298 /* LoginViewController.swift */; };
+		45C228C7244696C2009BD298 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C6244696C2009BD298 /* SignUpViewController.swift */; };
+		45C228C9244696D9009BD298 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C8244696D9009BD298 /* ContactViewController.swift */; };
+		6A73662CE2966982A2DF2302 /* Pods_SparntanNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D8CDB252C9C4CA23C0F9EC /* Pods_SparntanNet.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		33D8CDB252C9C4CA23C0F9EC /* Pods_SparntanNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparntanNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4597A53B2446BA6C009D2C09 /* PostEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEventViewController.swift; sourceTree = "<group>"; };
+		4597A53D2446BCF9009D2C09 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTableViewCell.swift; path = SparntanNet/View/HomeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		4597A53F2446BD2B009D2C09 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		45C228A424468901009BD298 /* SparntanNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparntanNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45C228A724468901009BD298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45C228A924468901009BD298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		45C228AB24468901009BD298 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45C228AE24468901009BD298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45C228B024468903009BD298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45C228B324468903009BD298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45C228B524468903009BD298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45C228BC24468BA4009BD298 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45C228C22446969B009BD298 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		45C228C4244696AF009BD298 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		45C228C6244696C2009BD298 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		45C228C8244696D9009BD298 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		53CCFA97F8C8C19C8A002CC1 /* Pods-SparntanNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparntanNet.debug.xcconfig"; path = "Target Support Files/Pods-SparntanNet/Pods-SparntanNet.debug.xcconfig"; sourceTree = "<group>"; };
+		952E1577DA0A6D038BF23859 /* Pods-SparntanNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparntanNet.release.xcconfig"; path = "Target Support Files/Pods-SparntanNet/Pods-SparntanNet.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45C228A124468901009BD298 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A73662CE2966982A2DF2302 /* Pods_SparntanNet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3622C595BB688B8B7E96C9C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33D8CDB252C9C4CA23C0F9EC /* Pods_SparntanNet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45C2289B24468901009BD298 = {
+			isa = PBXGroup;
+			children = (
+				45C228A624468901009BD298 /* SparntanNet */,
+				45C228A524468901009BD298 /* Products */,
+				F46E7F17E09F238347B8E5DC /* Pods */,
+				3622C595BB688B8B7E96C9C7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		45C228A524468901009BD298 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45C228A424468901009BD298 /* SparntanNet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45C228A624468901009BD298 /* SparntanNet */ = {
+			isa = PBXGroup;
+			children = (
+				45C228A724468901009BD298 /* AppDelegate.swift */,
+				45C228A924468901009BD298 /* SceneDelegate.swift */,
+				45C228B224468903009BD298 /* LaunchScreen.storyboard */,
+				45C228AD24468901009BD298 /* Main.storyboard */,
+				45C228BE24468FCC009BD298 /* Model */,
+				45C228C024468FFD009BD298 /* View */,
+				45C228C124469007009BD298 /* Controllers */,
+				45C228B024468903009BD298 /* Assets.xcassets */,
+				45C228B524468903009BD298 /* Info.plist */,
+				45C228BC24468BA4009BD298 /* GoogleService-Info.plist */,
+			);
+			path = SparntanNet;
+			sourceTree = "<group>";
+		};
+		45C228BE24468FCC009BD298 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4597A53F2446BD2B009D2C09 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45C228C024468FFD009BD298 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4597A53D2446BCF9009D2C09 /* HomeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45C228C124469007009BD298 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45C228AB24468901009BD298 /* ViewController.swift */,
+				45C228C22446969B009BD298 /* HomeViewController.swift */,
+				45C228C4244696AF009BD298 /* LoginViewController.swift */,
+				45C228C6244696C2009BD298 /* SignUpViewController.swift */,
+				45C228C8244696D9009BD298 /* ContactViewController.swift */,
+				4597A53B2446BA6C009D2C09 /* PostEventViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F46E7F17E09F238347B8E5DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53CCFA97F8C8C19C8A002CC1 /* Pods-SparntanNet.debug.xcconfig */,
+				952E1577DA0A6D038BF23859 /* Pods-SparntanNet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45C228A324468901009BD298 /* SparntanNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45C228B824468903009BD298 /* Build configuration list for PBXNativeTarget "SparntanNet" */;
+			buildPhases = (
+				4AAE0828F6601391CC2A90A1 /* [CP] Check Pods Manifest.lock */,
+				45C228A024468901009BD298 /* Sources */,
+				45C228A124468901009BD298 /* Frameworks */,
+				45C228A224468901009BD298 /* Resources */,
+				2F13C2CE369929E5380289D1 /* [CP] Embed Pods Frameworks */,
+				49F83952474F61B33736BE8B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SparntanNet;
+			productName = SparntanNet;
+			productReference = 45C228A424468901009BD298 /* SparntanNet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45C2289C24468901009BD298 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Bella Wei";
+				TargetAttributes = {
+					45C228A324468901009BD298 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 45C2289F24468901009BD298 /* Build configuration list for PBXProject "SparntanNet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45C2289B24468901009BD298;
+			productRefGroup = 45C228A524468901009BD298 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45C228A324468901009BD298 /* SparntanNet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45C228A224468901009BD298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C228B424468903009BD298 /* LaunchScreen.storyboard in Resources */,
+				45C228BD24468BA5009BD298 /* GoogleService-Info.plist in Resources */,
+				45C228B124468903009BD298 /* Assets.xcassets in Resources */,
+				45C228AF24468901009BD298 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F13C2CE369929E5380289D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparntanNet/Pods-SparntanNet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparntanNet/Pods-SparntanNet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SparntanNet/Pods-SparntanNet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49F83952474F61B33736BE8B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparntanNet/Pods-SparntanNet-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparntanNet/Pods-SparntanNet-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SparntanNet/Pods-SparntanNet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AAE0828F6601391CC2A90A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SparntanNet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45C228A024468901009BD298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C228C7244696C2009BD298 /* SignUpViewController.swift in Sources */,
+				45C228C9244696D9009BD298 /* ContactViewController.swift in Sources */,
+				45C228AC24468901009BD298 /* ViewController.swift in Sources */,
+				45C228A824468901009BD298 /* AppDelegate.swift in Sources */,
+				45C228AA24468901009BD298 /* SceneDelegate.swift in Sources */,
+				45C228C5244696AF009BD298 /* LoginViewController.swift in Sources */,
+				4597A53E2446BCF9009D2C09 /* HomeTableViewCell.swift in Sources */,
+				45C228C32446969B009BD298 /* HomeViewController.swift in Sources */,
+				4597A53C2446BA6C009D2C09 /* PostEventViewController.swift in Sources */,
+				4597A5402446BD2B009D2C09 /* Post.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		45C228AD24468901009BD298 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45C228AE24468901009BD298 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		45C228B224468903009BD298 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45C228B324468903009BD298 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45C228B624468903009BD298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45C228B724468903009BD298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45C228B924468903009BD298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53CCFA97F8C8C19C8A002CC1 /* Pods-SparntanNet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SparntanNet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sjsu.SparntanNet;
+				PRODUCT_NAME = SparntanNet;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45C228BA24468903009BD298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 952E1577DA0A6D038BF23859 /* Pods-SparntanNet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SparntanNet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sjsu.SparntanNet;
+				PRODUCT_NAME = SparntanNet;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45C2289F24468901009BD298 /* Build configuration list for PBXProject "SparntanNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C228B624468903009BD298 /* Debug */,
+				45C228B724468903009BD298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45C228B824468903009BD298 /* Build configuration list for PBXNativeTarget "SparntanNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C228B924468903009BD298 /* Debug */,
+				45C228BA24468903009BD298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45C2289C24468901009BD298 /* Project object */;
+}
