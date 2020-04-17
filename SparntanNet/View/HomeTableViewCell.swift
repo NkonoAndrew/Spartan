@@ -13,9 +13,12 @@ class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var eventLabel: UILabel!
     
+    @IBOutlet weak var eventNameTableLabel: UILabel!
+ 
     func configureCell(post: Post) {
     
     self.eventLabel.text = post.context
       // self.eventLabel.text = "hello world"
+    self.eventNameTableLabel.text = post.eventname
     }
 }

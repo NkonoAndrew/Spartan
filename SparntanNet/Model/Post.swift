@@ -12,10 +12,12 @@ import UIKit
 
 class Post {
     var context: String
+    var eventname: String
     
     // Default constructor
     init() {
         self.context = "Default context"
+        self.eventname = "Default eventname"
     }
     
     // Data parsing
@@ -28,6 +30,12 @@ class Post {
          self.context = "Default context"
         }
         
+         if let eventnames = data["eventname"] {
+            self.eventname = eventnames as! String
+        }else {
+         self.eventname = "Default eventname"
+        
+        
     }
     
     // For debug
@@ -39,3 +47,4 @@ class Post {
 
 }
 
+}

@@ -16,6 +16,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     @IBOutlet weak var eventTable: UITableView!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetch_posts()
@@ -24,7 +25,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     
-    //Read data from database
+    /**
+     Read data from database
+     */
     func fetch_posts() {
         db.collection("posts").getDocuments{ (snapshot, error) in
             if let err = error {
@@ -41,7 +44,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     
-    // Initialize table with fetched data
+    /**
+     Initialize table with fetched data
+     */
     func initTable(){
         eventTable.delegate = self
         eventTable.dataSource = self
