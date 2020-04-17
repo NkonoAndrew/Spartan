@@ -12,9 +12,10 @@ import FirebaseFirestore
 class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var eventLabel: UILabel!
+    
     func configureCell(post: Post) {
     
-       self.eventLabel.text = post.context
-       //self.eventLabel.text = "hello world"
+    self.eventLabel.text = post.context
+      // self.eventLabel.text = "hello world"
     }
 }
