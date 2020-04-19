@@ -13,10 +13,12 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     private var posts = [Post]()
     private var db = Firestore.firestore()
+    var isFetching: Bool = false
+  
     
     @IBOutlet weak var eventTable: UITableView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetch_posts()
@@ -61,6 +63,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+        // load cell data
         if indexPath.row > posts.count {
             return UITableViewCell()
         }
@@ -69,4 +73,10 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         return cell
     }
+    // MARK: UIScrollView Delegate
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let offsetY = scrollView.contentOffset.y
+//        let contentHeight = scrollView.contentSize.height
+//        //print("offsetY:\(offsetY) | contentHeight: \(contentHeight)")
+//}
 }
