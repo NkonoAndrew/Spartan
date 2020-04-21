@@ -11,7 +11,7 @@
         <!--Post-->
         <scene sceneID="rkA-co-HIB">
             <objects>
-                <viewController id="ora-0U-hUB" customClass="PostEventViewController" customModule="SparntanNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ora-0U-hUB" customClass="PostEventViewController" customModule="SpartanNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bo6-wv-nBI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
         <!--Home View Controller-->
         <scene sceneID="2mg-gF-P1d">
             <objects>
-                <viewController id="oG5-vG-30m" customClass="HomeViewController" customModule="SparntanNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oG5-vG-30m" customClass="HomeViewController" customModule="SpartanNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xgA-er-8CV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,28 +75,36 @@
                                 <rect key="frame" x="0.0" y="86" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="375" id="MH0-22-zKW" customClass="HomeTableViewCell" customModule="SparntanNet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="375"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="215" id="MH0-22-zKW" customClass="HomeTableViewCell" customModule="SpartanNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="215"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MH0-22-zKW" id="6pz-kk-n9z">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="375"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="215"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="eventname label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXh-V8-QmT">
-                                                    <rect key="frame" x="20" y="32" width="366" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="eventname label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXh-V8-QmT">
+                                                    <rect key="frame" x="20" y="34" width="374" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="context Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5e-UT-ydr">
-                                                    <rect key="frame" x="20" y="91" width="374" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="context Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5e-UT-ydr">
+                                                    <rect key="frame" x="20" y="87" width="355" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="X5e-UT-ydr" secondAttribute="bottom" constant="99" id="0GR-Er-cF8"/>
+                                                <constraint firstItem="CXh-V8-QmT" firstAttribute="leading" secondItem="6pz-kk-n9z" secondAttribute="leadingMargin" id="81Y-KH-Y1z"/>
+                                                <constraint firstItem="CXh-V8-QmT" firstAttribute="top" secondItem="6pz-kk-n9z" secondAttribute="topMargin" constant="23" id="MLm-NK-uiH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="X5e-UT-ydr" secondAttribute="trailing" constant="281.5" id="QQv-XA-6Fq"/>
+                                                <constraint firstItem="X5e-UT-ydr" firstAttribute="top" secondItem="CXh-V8-QmT" secondAttribute="bottom" constant="32.5" id="Tyi-y6-3ta"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CXh-V8-QmT" secondAttribute="trailing" constant="240" id="VjE-hI-eNP"/>
+                                                <constraint firstItem="X5e-UT-ydr" firstAttribute="leading" secondItem="6pz-kk-n9z" secondAttribute="leadingMargin" id="siq-nc-ix9"/>
+                                                <constraint firstItem="X5e-UT-ydr" firstAttribute="top" secondItem="CXh-V8-QmT" secondAttribute="bottom" constant="32.5" id="zN8-jM-GvW"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="eventLabel" destination="X5e-UT-ydr" id="G82-3N-q1H"/>
@@ -115,7 +123,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ghl-00-IMn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Sou-vn-jiH"/>
+                    <navigationItem key="navigationItem" id="Sou-vn-jiH">
+                        <barButtonItem key="rightBarButtonItem" title="LogOut" id="JFq-pC-2y6">
+                            <connections>
+                                <action selector="logOutButtonTapped:" destination="oG5-vG-30m" id="pNj-Z6-HDs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="eventTable" destination="ccx-bu-9oh" id="Hsq-Ar-geD"/>
                     </connections>
@@ -162,7 +176,7 @@
         <!--Login View Controller-->
         <scene sceneID="Xqk-4s-JjB">
             <objects>
-                <viewController id="191-fG-dom" customClass="LoginViewController" customModule="SparntanNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="191-fG-dom" customClass="LoginViewController" customModule="SpartanNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="chu-SO-zVg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +240,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="nf5-P7-3qm">
             <objects>
-                <viewController id="DMC-qB-KdX" customClass="SignUpViewController" customModule="SparntanNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DMC-qB-KdX" customClass="SignUpViewController" customModule="SpartanNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="poA-TI-5Dx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,7 +336,7 @@
         <!--View Controller-->
         <scene sceneID="23h-u8-XZe">
             <objects>
-                <viewController id="mBw-ql-iD3" customClass="ViewController" customModule="SparntanNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mBw-ql-iD3" customClass="ViewController" customModule="SpartanNet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pfj-Yd-FCD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -362,6 +376,13 @@
                                     <constraint firstItem="V0N-qd-gsj" firstAttribute="height" secondItem="bjc-oC-0Ge" secondAttribute="height" id="usG-M5-1Bg"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to SpartanNet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugi-mp-inY">
+                                <rect key="frame" x="89" y="366" width="237" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>

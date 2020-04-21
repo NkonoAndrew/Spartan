@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  SparntanNet
 //
-//  Created by Bella Wei on 4/14/20.
+//  Created by Bella Wei on 3/25/20.
 //  Copyright © 2020 Bella Wei. All rights reserved.
 //
 
@@ -14,10 +14,13 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     private var posts = [Post]()
     private var db = Firestore.firestore()
     var isFetching: Bool = false
-  
+    
     
     @IBOutlet weak var eventTable: UITableView!
     
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        navigateToviewController()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +28,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         // Do any additional setup after loading the view.
     }
-    
-    
     /**
      Read data from database
      */
@@ -63,7 +64,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
+        
         // load cell data
         if indexPath.row > posts.count {
             return UITableViewCell()
@@ -74,9 +75,22 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     // MARK: UIScrollView Delegate
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let offsetY = scrollView.contentOffset.y
-//        let contentHeight = scrollView.contentSize.height
-//        //print("offsetY:\(offsetY) | contentHeight: \(contentHeight)")
-//}
+    //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    //        let offsetY = scrollView.contentOffset.y
+    //        let contentHeight = scrollView.contentSize.height
+    //        //print("offsetY:\(offsetY) | contentHeight: \(contentHeight)")
+    //}
+    
+    /**
+     VC navigating
+     */
+    func navigateToviewController(){
+        print("Navigated to ViewController")
+        let mainStoryboard =  UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = mainStoryboard
+            .instantiateViewController(identifier:
+                "ViewController") as! ViewController
+        loginVC.modalPresentationStyle = .fullScreen
+        present(loginVC, animated: true, completion: nil)
+    }
 }

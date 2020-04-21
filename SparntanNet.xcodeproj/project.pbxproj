@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4503D0CF244BAFB8007F860C /* UIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503D0CE244BAFB8007F860C /* UIController.swift */; };
-		4503D0D1244BC78A007F860C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503D0D0244BC78A007F860C /* Constants.swift */; };
 		4597A53C2446BA6C009D2C09 /* PostEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597A53B2446BA6C009D2C09 /* PostEventViewController.swift */; };
 		4597A53E2446BCF9009D2C09 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597A53D2446BCF9009D2C09 /* HomeTableViewCell.swift */; };
 		4597A5402446BD2B009D2C09 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597A53F2446BD2B009D2C09 /* Post.swift */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		33D8CDB252C9C4CA23C0F9EC /* Pods_SparntanNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparntanNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4503D0CE244BAFB8007F860C /* UIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIController.swift; sourceTree = "<group>"; };
-		4503D0D0244BC78A007F860C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4597A53B2446BA6C009D2C09 /* PostEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEventViewController.swift; sourceTree = "<group>"; };
 		4597A53D2446BCF9009D2C09 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTableViewCell.swift; path = SparntanNet/View/HomeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		4597A53F2446BD2B009D2C09 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			children = (
 				4597A53F2446BD2B009D2C09 /* Post.swift */,
 				4503D0CE244BAFB8007F860C /* UIController.swift */,
-				4503D0D0244BC78A007F860C /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,7 +287,6 @@
 				45C228C32446969B009BD298 /* HomeViewController.swift in Sources */,
 				4597A53C2446BA6C009D2C09 /* PostEventViewController.swift in Sources */,
 				4597A5402446BD2B009D2C09 /* Post.swift in Sources */,
-				4503D0D1244BC78A007F860C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
