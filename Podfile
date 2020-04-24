@@ -14,6 +14,8 @@ target 'SparntanNet' do
 	pod 'GoogleSignIn'
 	pod 'FirebaseUI'
 	pod 'FirebaseUI/Google'
+	pod 'Firebase/Core'
+	pod 'Firebase/Storage'
 
 
 

@@ -61,6 +61,7 @@ class Post {
     func printPost() {
         print("=======================")
         // print("context: \(self.context)")
+        print("uID: \(self.uID)")
         print("eventname: \(self.eventName)")
         print("imageName: \(self.imageName)")
         print("content: \(self.content)")

@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
+import FirebaseStorage
+import FirebaseDatabase
 
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -49,22 +52,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     
-    //    func loadImage(imageName: String) {
-    //        let MAX_SIZE: Int64 =  1 * 1024 * 1024
-    //        let imageRef = Storage.storage().reference().child(imageName)
-    //        imageRef.getData(maxSize: MAX_SIZE) { data, error in
-    //            if let err = error {
-    //                print("\(err)")
-    //                return
-    //            }
-    //            if data != nil {
-    //                print("Sucessfully download image.")
-    //               // self.postImage.image = UIImage(data: data)
-    //
-    //            }
-    //        }
-    //    }
-    //
     /**
      Initialize table with fetched data
      */
@@ -90,38 +77,39 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = eventTable.dequeueReusableCell(withIdentifier: "postCell") as? HomeTableViewCell ?? HomeTableViewCell(style: .default, reuseIdentifier: "postCell") as HomeTableViewCell
         
         // TODO:
+        //  cell.configureCell(post: posts[indexPath.row])
+       // cell.postContent.tag = indexPath.row
         if (posts.count >= 1) {
             let curPost = posts[indexPath.row]
             cell.setPost(post: curPost)
         }
         
-        
         return cell
     }
-    // MARK: UIScrollView Delegate
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let offsetY = scrollView.contentOffset.y
-//        let contentHeight = scrollView.contentSize.height
-//        if offsetY > contentHeight - scrollView.frame.height {
-//            if !isFetching {
-//                fetchPosts()
-//                self.ui.setTableActicityIndicator(tv: eventTable, isTop: false)
-//            }
-//        }
-//    }
-//
-//    func scrollViewWillEndDragging(_ scrollView: UIScrollView,
-//                                   withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//        if (velocity.y > 0) {
-//            self.navigationController?.setNavigationBarHidden(true, animated: true)
-//            if let nc = self.navigationController {
-//                self.ui.setTransparentNavigationBar(nc: nc)
-//            }
-//        } else {
-//            self.navigationController?.setNavigationBarHidden(false, animated: true)
-//        }
-//    }
-//    
+     //MARK: UIScrollView Delegate
+        func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            let offsetY = scrollView.contentOffset.y
+            let contentHeight = scrollView.contentSize.height
+            if offsetY > contentHeight - scrollView.frame.height {
+                if !isFetching {
+                    fetchPosts()
+                    self.ui.setTableActicityIndicator(tv: eventTable, isTop: false)
+                }
+            }
+        }
+    
+        func scrollViewWillEndDragging(_ scrollView: UIScrollView,
+                                       withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+            if (velocity.y > 0) {
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+                if let nc = self.navigationController {
+                    self.ui.setTransparentNavigationBar(nc: nc)
+                }
+            } else {
+                self.navigationController?.setNavigationBarHidden(false, animated: true)
+            }
+        }
+    
     /**
      VC navigating
      */

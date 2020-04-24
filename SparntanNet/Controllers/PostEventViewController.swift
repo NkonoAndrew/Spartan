@@ -14,7 +14,6 @@ import FirebaseFirestore
 class PostEventViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextViewDelegate {
 
     let db = Firestore.firestore()
-    var newImageName:String = ""
     let ui = UIController()
     var userNewPost: Post!
     
@@ -62,8 +61,8 @@ class PostEventViewController: UIViewController, UIImagePickerControllerDelegate
         doc.setData([
             //"context":self.contextField.text ?? "Default context",
             "eventName":self.eventNameTextField.text ?? "Default eventname",
-            "imageName":self.newImageName,
-            "content":self.postContentField.text as Any
+            "imageName":userNewPost.imageName,
+            "content":self.postContentField.text ?? "Default content"
         ]){ err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -77,7 +76,7 @@ class PostEventViewController: UIViewController, UIImagePickerControllerDelegate
         if let image = ui.resized(view: postImageView, targetSize: CGSize(width: 374.0, height: 218.0)) {
             let imageName = "images/\(NSUUID().uuidString).png"
             print("imageName = \(imageName), before upload" )
-            self.newImageName = imageName
+            self.userNewPost.imageName = imageName
             let imageRef = Storage.storage().reference().child(imageName)
             
             if let uploadData = image.pngData() {
