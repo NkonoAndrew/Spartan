@@ -357,7 +357,6 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - FirebaseUI
-  - FirebaseUI/Facebook
   - FirebaseUI/Google
   - GoogleSignIn
 
@@ -426,6 +425,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
 
-PODFILE CHECKSUM: b7c93934ed4472a39b1ddeec0f560532a48322d5
+PODFILE CHECKSUM: d3e5d6fcf80f6cadfeca82c300047a26b474d0cf
 
 COCOAPODS: 1.9.0
