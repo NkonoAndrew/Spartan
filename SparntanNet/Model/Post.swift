@@ -11,29 +11,48 @@ import Foundation
 import UIKit
 
 class Post {
-    var context: String
-    var eventname: String
+    var uID:String
+    var imageName: String
+    var eventName: String
+    var content:String
+    
     
     // Default constructor
     init() {
-        self.context = "Default context"
-        self.eventname = "Default eventname"
+        self.uID = "00000000"
+        self.imageName = "images/default.png"
+        self.eventName = "DefaultEventName"
+        self.content = "DefaultContent"
+        
     }
     
     // Data parsing
     init(data: [String: Any]) {
-    
-       // self.context = data["context"] ?? "Default context" as! String
-        if let contexts = data["context"] {
-            self.context = contexts as! String
-        }else {
-         self.context = "Default context"
+        
+        //   self.uID = data["uid"]  as! String
+        
+        if let uIDs = data["uid"] {
+            self.uID = uIDs as! String
+        } else {
+            self.uID = "images/default.png"
         }
         
-         if let eventnames = data["eventname"] {
-            self.eventname = eventnames as! String
-        }else {
-         self.eventname = "Default eventname"
+        // self.context = data["context"] ?? "Default context" as! String
+        if let imageNames = data["imageName"] {
+            self.imageName = imageNames as! String
+        } else {
+            self.imageName = "images/default.png"
+        }
+        if let eventnames = data["eventname"] {
+            self.eventName = eventnames as! String
+        } else {
+            self.eventName = "Default eventname"
+        }
+        if let contents = data["content"] {
+            self.content = contents as! String
+        } else {
+            self.content = "Default content"
+        }
         
         
     }
@@ -41,10 +60,14 @@ class Post {
     // For debug
     func printPost() {
         print("=======================")
-        print("context: \(self.context)")
+        // print("context: \(self.context)")
+        print("eventname: \(self.eventName)")
+        print("imageName: \(self.imageName)")
+        print("content: \(self.content)")
+        
         print("=======================")
+        
+        
     }
-
-}
-
+    
 }

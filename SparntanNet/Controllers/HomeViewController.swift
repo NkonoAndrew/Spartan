@@ -14,6 +14,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     private var posts = [Post]()
     private var db = Firestore.firestore()
     var isFetching: Bool = false
+    let ui = UIController()
     
     
     @IBOutlet weak var eventTable: UITableView!
@@ -24,14 +25,14 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetch_posts()
+        self.fetchPosts()
         
         // Do any additional setup after loading the view.
     }
     /**
      Read data from database
      */
-    func fetch_posts() {
+    func fetchPosts() {
         db.collection("posts").getDocuments{ (snapshot, error) in
             if let err = error {
                 debugPrint("Error fetching does: \(err)")
@@ -43,10 +44,27 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     self.posts.append(newPost)
                 }
                 self.initTable()
+                self.isFetching = false
             }
         }
     }
     
+    //    func loadImage(imageName: String) {
+    //        let MAX_SIZE: Int64 =  1 * 1024 * 1024
+    //        let imageRef = Storage.storage().reference().child(imageName)
+    //        imageRef.getData(maxSize: MAX_SIZE) { data, error in
+    //            if let err = error {
+    //                print("\(err)")
+    //                return
+    //            }
+    //            if data != nil {
+    //                print("Sucessfully download image.")
+    //               // self.postImage.image = UIImage(data: data)
+    //
+    //            }
+    //        }
+    //    }
+    //
     /**
      Initialize table with fetched data
      */
@@ -70,16 +88,39 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             return UITableViewCell()
         }
         let cell = eventTable.dequeueReusableCell(withIdentifier: "postCell") as? HomeTableViewCell ?? HomeTableViewCell(style: .default, reuseIdentifier: "postCell") as HomeTableViewCell
-        cell.configureCell(post: posts[indexPath.row])
+        
+        // TODO:
+        if (posts.count >= 1) {
+            let curPost = posts[indexPath.row]
+            cell.setPost(post: curPost)
+        }
+        
         
         return cell
     }
     // MARK: UIScrollView Delegate
-    //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    //        let offsetY = scrollView.contentOffset.y
-    //        let contentHeight = scrollView.contentSize.height
-    //        //print("offsetY:\(offsetY) | contentHeight: \(contentHeight)")
-    //}
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.height {
+            if !isFetching {
+                fetchPosts()
+                self.ui.setTableActicityIndicator(tv: eventTable, isTop: false)
+            }
+        }
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView,
+                                   withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if (velocity.y > 0) {
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+            if let nc = self.navigationController {
+                self.ui.setTransparentNavigationBar(nc: nc)
+            }
+        } else {
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+    }
     
     /**
      VC navigating

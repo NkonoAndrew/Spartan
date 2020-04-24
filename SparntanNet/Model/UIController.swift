@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class UIController {
+    let MAX_SIZE: Int64 =  1 * 1024 * 1024
      static func styleTextField(_ textfield:UITextField) {
         
         // Create the bottom line
@@ -26,6 +27,59 @@ class UIController {
         textfield.layer.addSublayer(bottomLine)
         
     }
+    
+    func setTransparentNavigationBar(nc: UINavigationController) {
+        nc.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        nc.navigationBar.shadowImage = UIImage()
+        nc.navigationBar.isTranslucent = true
+        nc.view.backgroundColor = .clear
+    }
+    
+    func resized(view: UIImageView, targetSize: CGSize) -> UIImage? {
+        var resizedImage: UIImage?
+        
+        if let image = view.image {
+            let size = image.size
+            let widthRatio = targetSize.width / size.width
+            let heightRatio = targetSize.height / size.height
+            
+            print(image.size)
+            var canvas: CGSize
+            if widthRatio > heightRatio {
+                canvas = CGSize(width: image.size.width * heightRatio,
+                height: image.size.height * heightRatio)
+            } else {
+                canvas = CGSize(width: image.size.width * widthRatio,
+                height: image.size.height * widthRatio)
+            }
+            let rect = CGRect(x: 0, y: 0, width: canvas.width, height: canvas.height)
+            print("canvas", canvas)
+            UIGraphicsBeginImageContextWithOptions(canvas, false, 1.0)
+            image.draw(in: rect)
+            resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+        } else {
+            print("Nil image.")
+        }
+        return resizedImage
+    }
+    
+    func setTableActicityIndicator(tv: UITableView, isTop: Bool) {
+            let spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+            spinner.startAnimating()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                spinner.stopAnimating()
+                spinner.isHidden = true
+            }
+            spinner.frame = CGRect(x: 0, y: 0, width: tv.frame.width, height: 44)
+            if (isTop) {
+                tv.tableHeaderView = spinner
+            } else {
+                tv.tableFooterView = spinner
+            }
+        }
+    
     
     static func styleFilledButton(_ button:UIButton) {
         
