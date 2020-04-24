@@ -99,29 +99,29 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     // MARK: UIScrollView Delegate
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        if offsetY > contentHeight - scrollView.frame.height {
-            if !isFetching {
-                fetchPosts()
-                self.ui.setTableActicityIndicator(tv: eventTable, isTop: false)
-            }
-        }
-    }
-    
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView,
-                                   withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if (velocity.y > 0) {
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
-            if let nc = self.navigationController {
-                self.ui.setTransparentNavigationBar(nc: nc)
-            }
-        } else {
-            self.navigationController?.setNavigationBarHidden(false, animated: true)
-        }
-    }
-    
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let offsetY = scrollView.contentOffset.y
+//        let contentHeight = scrollView.contentSize.height
+//        if offsetY > contentHeight - scrollView.frame.height {
+//            if !isFetching {
+//                fetchPosts()
+//                self.ui.setTableActicityIndicator(tv: eventTable, isTop: false)
+//            }
+//        }
+//    }
+//
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView,
+//                                   withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        if (velocity.y > 0) {
+//            self.navigationController?.setNavigationBarHidden(true, animated: true)
+//            if let nc = self.navigationController {
+//                self.ui.setTransparentNavigationBar(nc: nc)
+//            }
+//        } else {
+//            self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        }
+//    }
+//    
     /**
      VC navigating
      */
