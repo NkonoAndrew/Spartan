@@ -29,7 +29,6 @@ class HomeTableViewCell: UITableViewCell {
         eventNameTableLabel.text = post.eventName
         print("imageName = \(post.imageName)")
         downloadImage(imageName: post.imageName)
-        
         downloadImage(uid: post.uID)
         
         

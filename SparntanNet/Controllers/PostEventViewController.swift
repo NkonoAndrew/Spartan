@@ -13,7 +13,7 @@ import FirebaseFirestore
 import FirebaseDatabase
 
 class PostEventViewController: UIViewController,  UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITextViewDelegate {
-
+    
     let db = Firestore.firestore()
     let ui = UIController()
     var userNewPost: Post!
@@ -31,18 +31,19 @@ class PostEventViewController: UIViewController,  UINavigationControllerDelegate
         
         // Do any additional setup after loading the view.
     }
-     
+    
     /**
      In order to setup the camer mode, need to edit info.plist
      */
     @IBAction func touchCamera(_ sender: Any) {
         initImagePicker()
     }
-
+    
     //add data to firebase
     @IBAction func touchPost(_ sender: Any) {
         uploadPostImage()
         uploadPostData()
+        navigateToHomeView()
     }
     
     func setUI(){
@@ -87,6 +88,14 @@ class PostEventViewController: UIViewController,  UINavigationControllerDelegate
                 }
             }
         }
+    }
+    func navigateToHomeView(){
+        print("Navigated to Home View Controller!")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let tabbarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+                // Marked Line to ask system to use the old behavior: Full screen
+                tabbarVC.modalPresentationStyle = .fullScreen
+                self.present(tabbarVC, animated: false, completion: nil)
     }
     /**
      Init image picker with alert controller.
@@ -133,11 +142,8 @@ class PostEventViewController: UIViewController,  UINavigationControllerDelegate
     }
     
     func setupKeyboardDismiss() {
-       let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
-       tap.cancelsTouchesInView = false
-       self.view.addGestureRecognizer(tap)
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
     }
-    
-    
-    
 }
