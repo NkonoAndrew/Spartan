@@ -12,32 +12,35 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class HomeTableViewCell: UITableViewCell {
-
-
+    
+    
     @IBOutlet weak var postImage:UIImageView!
     @IBOutlet weak var eventNameTableLabel: UILabel!
     @IBOutlet weak var postContent:UITextView!
-   
+    
     let ui = UIController()
     var post = Post()
-
+    
     
     func setPost(post: Post) {
         self.post = post
         postContent.text = post.content
+        print("eventName = \(post.eventName)")
         eventNameTableLabel.text = post.eventName
+        print("imageName = \(post.imageName)")
         downloadImage(imageName: post.imageName)
+        
         downloadImage(uid: post.uID)
         
         
-   
-//      // self.eventLabel.text = "hello world"
-//        self.postImage.image = post.imageName
-//        self.eventNameTableLabel.text = post.eventName
-//        self.postContent.text =
-////    self.
-//
-    
+        
+        //      // self.eventLabel.text = "hello world"
+        //        self.postImage.image = post.imageName
+        //        self.eventNameTableLabel.text = post.eventName
+        //        self.postContent.text =
+        ////    self.
+        //
+        
     }
     
     func downloadImage(imageName: String) {
@@ -51,7 +54,7 @@ class HomeTableViewCell: UITableViewCell {
             if let data = data {
                 self.postImage.image = UIImage(data: data)
                 print("Sucessfully download image.")
-               // self.postImage.image = UIImage(data: data)
+                // self.postImage.image = UIImage(data: data)
                 
             }
         }
@@ -63,8 +66,11 @@ class HomeTableViewCell: UITableViewCell {
             if let err = error {
                 print("\(err)")
             } else {
-                let imageName = document?.get("imageName")
-                self.downloadImage(imageName: imageName as! String)
+                if let imageName = document?.get("imageName"){
+                    self.downloadImage(imageName: imageName as! String)
+                }else {
+                    self.downloadImage(imageName: "default.png")
+                }
             }
         }
     }

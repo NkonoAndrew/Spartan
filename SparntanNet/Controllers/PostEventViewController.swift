@@ -10,8 +10,9 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import FirebaseFirestore
+import FirebaseDatabase
 
-class PostEventViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextViewDelegate {
+class PostEventViewController: UIViewController,  UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITextViewDelegate {
 
     let db = Firestore.firestore()
     let ui = UIController()
@@ -21,39 +22,33 @@ class PostEventViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postContentField:UITextView!
     
-    
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userNewPost = Post()
+        self.setupKeyboardDismiss()
         self.postContentField.delegate = self
+        setUI()
         
         // Do any additional setup after loading the view.
     }
-    
+     
+    /**
+     In order to setup the camer mode, need to edit info.plist
+     */
     @IBAction func touchCamera(_ sender: Any) {
         initImagePicker()
     }
-    /**
-     Init image picker with alert controller.
-     */
-    func initImagePicker() {
-        let image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = .photoLibrary
-        //image.sourceType = .camera
-        image.allowsEditing = true
-        self.present(image, animated: true) {
-        }
-    }
-/**
-     In order to setup the camer mode, need to edit info.plist
-     */
- 
+
     //add data to firebase
     @IBAction func touchPost(_ sender: Any) {
         uploadPostImage()
         uploadPostData()
+    }
+    
+    func setUI(){
+        self.ui.setNavigationBarUI(vc: self)
+        self.ui.setTextViewUI(view: postContentField)
+        
     }
     
     func uploadPostData(){
@@ -92,6 +87,55 @@ class PostEventViewController: UIViewController, UIImagePickerControllerDelegate
                 }
             }
         }
+    }
+    /**
+     Init image picker with alert controller.
+     */
+    func initImagePicker() {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = .photoLibrary
+        //image.sourceType = .camera
+        image.allowsEditing = true
+        self.present(image, animated: true) {
+        }
+    }
+    /**
+     UIImagePickerController delegate
+     */
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print("imagePickerController is triggered!")
+        var selectedImage: UIImage?
+        if let editedImage = info[.editedImage] as? UIImage {
+            selectedImage = editedImage
+        } else if let
+            originalImage = info[.originalImage] as? UIImage {
+            selectedImage = originalImage
+        }
+        postImageView.image = selectedImage!
+        picker.dismiss(animated: true, completion: nil)
+    }
+    // MARK: UITextView Delegate
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        // reset text to empty
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = ui.DETAILS_PLACE_HOLDER
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    
+    func setupKeyboardDismiss() {
+       let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+       tap.cancelsTouchesInView = false
+       self.view.addGestureRecognizer(tap)
     }
     
     

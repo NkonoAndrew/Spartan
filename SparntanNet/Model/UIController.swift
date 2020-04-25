@@ -11,7 +11,9 @@ import UIKit
 
 class UIController {
     let MAX_SIZE: Int64 =  1 * 1024 * 1024
-     static func styleTextField(_ textfield:UITextField) {
+    let DETAILS_PLACE_HOLDER = "Add Details Here"
+    
+    static func styleTextField(_ textfield:UITextField) {
         
         // Create the bottom line
         let bottomLine = CALayer()
@@ -27,7 +29,24 @@ class UIController {
         textfield.layer.addSublayer(bottomLine)
         
     }
+    func setNavigationBarUI(vc: UIViewController) {
+        let nvBar = vc.navigationController?.navigationBar
+        nvBar?.barStyle = .default
+        nvBar?.tintColor = UIColor.init(displayP3Red: 0.22, green: 0.50, blue: 0.54, alpha: 1.0)
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "yellow-bird")
+        imageView.image = image
+        vc.navigationItem.titleView = imageView
+    }
     
+       func setTextViewUI(view: UITextView) {
+        view.text = self.DETAILS_PLACE_HOLDER
+        view.textColor = UIColor.lightGray
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.lightGray.cgColor
+        view.layer.cornerRadius = 8.0
+    }
     func setTransparentNavigationBar(nc: UINavigationController) {
         nc.navigationBar.setBackgroundImage(UIImage(), for: .default)
         nc.navigationBar.shadowImage = UIImage()
@@ -47,10 +66,10 @@ class UIController {
             var canvas: CGSize
             if widthRatio > heightRatio {
                 canvas = CGSize(width: image.size.width * heightRatio,
-                height: image.size.height * heightRatio)
+                                height: image.size.height * heightRatio)
             } else {
                 canvas = CGSize(width: image.size.width * widthRatio,
-                height: image.size.height * widthRatio)
+                                height: image.size.height * widthRatio)
             }
             let rect = CGRect(x: 0, y: 0, width: canvas.width, height: canvas.height)
             print("canvas", canvas)
@@ -66,19 +85,19 @@ class UIController {
     }
     
     func setTableActicityIndicator(tv: UITableView, isTop: Bool) {
-            let spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-            spinner.startAnimating()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                spinner.stopAnimating()
-                spinner.isHidden = true
-            }
-            spinner.frame = CGRect(x: 0, y: 0, width: tv.frame.width, height: 44)
-            if (isTop) {
-                tv.tableHeaderView = spinner
-            } else {
-                tv.tableFooterView = spinner
-            }
+        let spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+        spinner.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            spinner.stopAnimating()
+            spinner.isHidden = true
         }
+        spinner.frame = CGRect(x: 0, y: 0, width: tv.frame.width, height: 44)
+        if (isTop) {
+            tv.tableHeaderView = spinner
+        } else {
+            tv.tableFooterView = spinner
+        }
+    }
     
     
     static func styleFilledButton(_ button:UIButton) {

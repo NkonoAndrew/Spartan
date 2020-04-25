@@ -36,15 +36,19 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
      Read data from database
      */
     func fetchPosts() {
+    posts.removeAll()
+    
         db.collection("posts").getDocuments{ (snapshot, error) in
             if let err = error {
                 debugPrint("Error fetching does: \(err)")
             } else {
                 print("Sucessfully fetched posts.")
                 for document in snapshot!.documents {
-                    //print(document.data())
+                    print("debug = \(document.data())")
+                   // print("imageName = \(post.imageName)")
                     let newPost = Post(data: document.data())
                     self.posts.append(newPost)
+                    newPost.printPost()
                 }
                 self.initTable()
                 self.isFetching = false
@@ -82,6 +86,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if (posts.count >= 1) {
             let curPost = posts[indexPath.row]
             cell.setPost(post: curPost)
+            curPost.printPost()
         }
         
         return cell
@@ -91,10 +96,10 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let offsetY = scrollView.contentOffset.y
             let contentHeight = scrollView.contentSize.height
             if offsetY > contentHeight - scrollView.frame.height {
-                if !isFetching {
-                    fetchPosts()
+//                if !isFetching {
+//                    fetchPosts()
                     self.ui.setTableActicityIndicator(tv: eventTable, isTop: false)
-                }
+//                }
             }
         }
     
@@ -109,6 +114,11 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 self.navigationController?.setNavigationBarHidden(false, animated: true)
             }
         }
+        
+        func fetch_Post(){
+        isFetching = true
+        self.fetchPosts()
+    }
     
     /**
      VC navigating

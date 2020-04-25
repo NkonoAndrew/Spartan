@@ -16,14 +16,12 @@ class Post {
     var eventName: String
     var content:String
     
-    
     // Default constructor
     init() {
         self.uID = "00000000"
-        self.imageName = "images/default.png"
+        self.imageName = "default.png"
         self.eventName = "DefaultEventName"
         self.content = "DefaultContent"
-        
     }
     
     // Data parsing
@@ -34,27 +32,26 @@ class Post {
         if let uIDs = data["uid"] {
             self.uID = uIDs as! String
         } else {
-            self.uID = "images/default.png"
+            self.uID = "default.png"
         }
-        
         // self.context = data["context"] ?? "Default context" as! String
         if let imageNames = data["imageName"] {
             self.imageName = imageNames as! String
         } else {
-            self.imageName = "images/default.png"
+            self.imageName = "default.png"
         }
-        if let eventnames = data["eventname"] {
+        
+        if let eventnames = data["eventName"] {
             self.eventName = eventnames as! String
         } else {
             self.eventName = "Default eventname"
         }
+        
         if let contents = data["content"] {
             self.content = contents as! String
         } else {
             self.content = "Default content"
         }
-        
-        
     }
     
     // For debug
