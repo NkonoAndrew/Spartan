@@ -22,6 +22,7 @@
 		45C228C5244696AF009BD298 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C4244696AF009BD298 /* LoginViewController.swift */; };
 		45C228C7244696C2009BD298 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C6244696C2009BD298 /* SignUpViewController.swift */; };
 		45C228C9244696D9009BD298 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C8244696D9009BD298 /* ContactViewController.swift */; };
+		45D84CB42455295300A2A292 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D84CB32455295300A2A292 /* Contact.swift */; };
 		6A73662CE2966982A2DF2302 /* Pods_SparntanNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D8CDB252C9C4CA23C0F9EC /* Pods_SparntanNet.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		45C228C4244696AF009BD298 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		45C228C6244696C2009BD298 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		45C228C8244696D9009BD298 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		45D84CB32455295300A2A292 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		53CCFA97F8C8C19C8A002CC1 /* Pods-SparntanNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparntanNet.debug.xcconfig"; path = "Target Support Files/Pods-SparntanNet/Pods-SparntanNet.debug.xcconfig"; sourceTree = "<group>"; };
 		952E1577DA0A6D038BF23859 /* Pods-SparntanNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparntanNet.release.xcconfig"; path = "Target Support Files/Pods-SparntanNet/Pods-SparntanNet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				4597A53F2446BD2B009D2C09 /* Post.swift */,
+				45D84CB32455295300A2A292 /* Contact.swift */,
 				4503D0CE244BAFB8007F860C /* UIController.swift */,
 			);
 			path = Model;
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45D84CB42455295300A2A292 /* Contact.swift in Sources */,
 				45C228C7244696C2009BD298 /* SignUpViewController.swift in Sources */,
 				45C228C9244696D9009BD298 /* ContactViewController.swift in Sources */,
 				45C228AC24468901009BD298 /* ViewController.swift in Sources */,
