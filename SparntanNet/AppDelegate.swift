@@ -9,11 +9,15 @@
 import UIKit
 import GoogleSignIn
 import Firebase
+import FacebookCore
+import FacebookLogin
+import FacebookShare
 
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
+    
 var window:UIWindow?
    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
     
@@ -23,9 +27,9 @@ var window:UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
-        
         GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+        ApplicationDelegate.shared.application(application,didFinishLaunchingWithOptions: launchOptions)
         // Override point for customization after application launch.
         return true
     }
@@ -34,11 +38,19 @@ var window:UIWindow?
     @available(iOS 9.0, *)
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
       -> Bool {
-      return GIDSignIn.sharedInstance().handle(url)
+        ApplicationDelegate.shared.application(
+            application,
+            open: url,
+            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+        )
+      GIDSignIn.sharedInstance().handle(url)
+        return true
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url)
+        GIDSignIn.sharedInstance().handle(url)
+        return true
     }
     
     // Authenticate with Firebase

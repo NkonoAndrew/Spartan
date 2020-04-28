@@ -281,6 +281,7 @@
         <scene sceneID="tbP-Hc-ej3">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wlw-2p-NyQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JdZ-SD-oO1"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="128-Jw-llb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -473,7 +474,7 @@
                                             <constraint firstAttribute="height" constant="40" id="Hul-dP-d9S"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Sign UP"/>
+                                        <state key="normal" title="Sign Up"/>
                                         <connections>
                                             <segue destination="DMC-qB-KdX" kind="show" id="WfJ-mK-GtV"/>
                                         </connections>
@@ -524,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z22-Lg-GZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78" y="-759"/>
+            <point key="canvasLocation" x="-78.260869565217391" y="-759.375"/>
         </scene>
         <!--Home-->
         <scene sceneID="yHM-f6-nEI">
@@ -532,6 +533,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O4S-fo-Ebr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="px2-XN-53H"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fg9-dI-8pj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VKA-Je-CcU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

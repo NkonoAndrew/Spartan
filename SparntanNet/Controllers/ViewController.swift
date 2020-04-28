@@ -9,13 +9,15 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class ViewController: UIViewController, GIDSignInDelegate{
     
     @IBOutlet weak var signUpButton: UIButton!
     
     @IBOutlet weak var loginButton: UIButton!
-    
+        
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
         if let error = error {
@@ -30,13 +32,22 @@ class ViewController: UIViewController, GIDSignInDelegate{
     }
     
     
+    
     @IBAction func GIDSigninButton(_ sender: GIDSignInButton) {
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if let token = AccessToken.current,
+            !token.isExpired {
+            // User is logged in, do work such as go to next view controller.
+        }
+        let loginButton = FBLoginButton()
+        loginButton.center = view.center
+        view.addSubview(loginButton)
+        loginButton.permissions = ["public_profile", "email"]
+
         
         GIDSignIn.sharedInstance().presentingViewController = self
         GIDSignIn.sharedInstance()?.signIn()

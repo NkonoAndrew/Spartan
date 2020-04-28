@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,10 @@
 		45C228C9244696D9009BD298 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C8244696D9009BD298 /* ContactViewController.swift */; };
 		45D84CB42455295300A2A292 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D84CB32455295300A2A292 /* Contact.swift */; };
 		6A73662CE2966982A2DF2302 /* Pods_SparntanNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D8CDB252C9C4CA23C0F9EC /* Pods_SparntanNet.framework */; };
+		759F200824565CD000F5488E /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 759F200724565CD000F5488E /* FacebookShare */; };
+		759F200A24565CD000F5488E /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 759F200924565CD000F5488E /* FacebookCore */; };
+		759F200C24565CD000F5488E /* FacebookGamingServices in Frameworks */ = {isa = PBXBuildFile; productRef = 759F200B24565CD000F5488E /* FacebookGamingServices */; };
+		759F200E24565CD000F5488E /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 759F200D24565CD000F5488E /* FacebookLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,7 @@
 		45C228C8244696D9009BD298 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		45D84CB32455295300A2A292 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		53CCFA97F8C8C19C8A002CC1 /* Pods-SparntanNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparntanNet.debug.xcconfig"; path = "Target Support Files/Pods-SparntanNet/Pods-SparntanNet.debug.xcconfig"; sourceTree = "<group>"; };
+		759F200F24566C4C00F5488E /* SpartanNet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpartanNet.entitlements; sourceTree = "<group>"; };
 		952E1577DA0A6D038BF23859 /* Pods-SparntanNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparntanNet.release.xcconfig"; path = "Target Support Files/Pods-SparntanNet/Pods-SparntanNet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,7 +60,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759F200E24565CD000F5488E /* FacebookLogin in Frameworks */,
+				759F200824565CD000F5488E /* FacebookShare in Frameworks */,
+				759F200A24565CD000F5488E /* FacebookCore in Frameworks */,
 				6A73662CE2966982A2DF2302 /* Pods_SparntanNet.framework in Frameworks */,
+				759F200C24565CD000F5488E /* FacebookGamingServices in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +100,7 @@
 		45C228A624468901009BD298 /* SparntanNet */ = {
 			isa = PBXGroup;
 			children = (
+				759F200F24566C4C00F5488E /* SpartanNet.entitlements */,
 				45C228A724468901009BD298 /* AppDelegate.swift */,
 				45C228A924468901009BD298 /* SceneDelegate.swift */,
 				45C228B224468903009BD298 /* LaunchScreen.storyboard */,
@@ -164,6 +174,12 @@
 			dependencies = (
 			);
 			name = SparntanNet;
+			packageProductDependencies = (
+				759F200724565CD000F5488E /* FacebookShare */,
+				759F200924565CD000F5488E /* FacebookCore */,
+				759F200B24565CD000F5488E /* FacebookGamingServices */,
+				759F200D24565CD000F5488E /* FacebookLogin */,
+			);
 			productName = SparntanNet;
 			productReference = 45C228A424468901009BD298 /* SpartanNet.app */;
 			productType = "com.apple.product-type.application";
@@ -192,6 +208,9 @@
 				Base,
 			);
 			mainGroup = 45C2289B24468901009BD298;
+			packageReferences = (
+				759F200624565CD000F5488E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 45C228A524468901009BD298 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -435,6 +454,7 @@
 			baseConfigurationReference = 53CCFA97F8C8C19C8A002CC1 /* Pods-SparntanNet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SparntanNet/SpartanNet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SparntanNet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,6 +473,7 @@
 			baseConfigurationReference = 952E1577DA0A6D038BF23859 /* Pods-SparntanNet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SparntanNet/SpartanNet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SparntanNet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,6 +509,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		759F200624565CD000F5488E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		759F200724565CD000F5488E /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 759F200624565CD000F5488E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+		759F200924565CD000F5488E /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 759F200624565CD000F5488E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		759F200B24565CD000F5488E /* FacebookGamingServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 759F200624565CD000F5488E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookGamingServices;
+		};
+		759F200D24565CD000F5488E /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 759F200624565CD000F5488E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45C2289C24468901009BD298 /* Project object */;
 }
