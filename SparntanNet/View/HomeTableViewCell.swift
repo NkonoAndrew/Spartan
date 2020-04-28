@@ -17,10 +17,10 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var postImage:UIImageView!
     @IBOutlet weak var eventNameTableLabel: UILabel!
     @IBOutlet weak var postContent:UITextView!
-    
+    @IBOutlet weak var eventDateTableLabel: UILabel!
     let ui = UIController()
     var post = Post()
-    
+
     
     func setPost(post: Post) {
         self.post = post
@@ -28,6 +28,8 @@ class HomeTableViewCell: UITableViewCell {
         print("eventName = \(post.eventName)")
         eventNameTableLabel.text = post.eventName
         print("imageName = \(post.imageName)")
+        eventDateTableLabel.text = post.eventDate
+        print("eventDate = \(post.eventDate)")
         downloadImage(imageName: post.imageName)
         downloadImage(uid: post.uID)
         

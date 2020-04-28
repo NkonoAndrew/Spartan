@@ -16,6 +16,7 @@ class ContactViewController: UIViewController {
     
     let db = Firestore.firestore()
     let ui = UIController()
+    let alertService = AlertService()
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
@@ -27,10 +28,14 @@ class ContactViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Contact"
         setUpElements()
+        setUI()
         // Do any additional setup after loading the view.
     }
     func setUpElements(){
         ErrorLabel.alpha = 0
+    }
+    func setUI(){
+        self.ui.setTextViewUI(view: feedbackTextView)
     }
     
     func validateFields() -> String? {
@@ -45,6 +50,7 @@ class ContactViewController: UIViewController {
     
     @IBAction func sendMessageButton(_ sender: Any) {
         // Vaidate the feilds
+        
         let error = validateFields()
         if error != nil {
             showError(error!)
@@ -62,11 +68,29 @@ class ContactViewController: UIViewController {
                     print("Error submiting feedback:\(err)")
                 }else {
                     print("Feedback Successfully written!")
+                    //                     let alert = UIAlertController(title: " ", message: "Thank you for your feedback", preferredStyle: .alert)
+                    //                    self.present(alert, animated: true, completion: nil)
+                    
+                    let alertVC = self.alertService.alert()
+                    self.present(alertVC, animated: true, completion: nil)
+                    //self.navigateToHomeView()
+                    
+                    
+                    
                 }
                 
                 
             }
         }
+        
+    }
+    func navigateToHomeView(){
+        print("Navigated to Home View Controller!")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabbarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        // Marked Line to ask system to use the old behavior: Full screen
+        tabbarVC.modalPresentationStyle = .fullScreen
+        self.present(tabbarVC, animated: false, completion: nil)
     }
     
     func showError(_ message:String){
@@ -74,16 +98,5 @@ class ContactViewController: UIViewController {
         ErrorLabel.alpha = 1
     }
     
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
