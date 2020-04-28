@@ -15,12 +15,14 @@ class Post {
     var imageName: String
     var eventName: String
     var content:String
+    var eventDate:String
     
     // Default constructor
     init() {
         self.uID = "00000000"
         self.imageName = "default.png"
         self.eventName = "DefaultEventName"
+        self.eventDate = "DeaultDate"
         self.content = "DefaultContent"
     }
     
@@ -47,6 +49,12 @@ class Post {
             self.eventName = "Default eventname"
         }
         
+         if let eventdatess = data["eventDate"] {
+            self.eventDate = eventdatess as! String
+        } else {
+            self.eventDate = "Default eventdate"
+        }
+        
         if let contents = data["content"] {
             self.content = contents as! String
         } else {
@@ -61,6 +69,7 @@ class Post {
         print("uID: \(self.uID)")
         print("eventname: \(self.eventName)")
         print("imageName: \(self.imageName)")
+         print("eventDate: \(self.eventDate)")
         print("content: \(self.content)")
         
         print("=======================")

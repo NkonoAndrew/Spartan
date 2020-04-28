@@ -29,6 +29,7 @@ class UIController {
         textfield.layer.addSublayer(bottomLine)
         
     }
+    
     func setNavigationBarUI(vc: UIViewController) {
         let nvBar = vc.navigationController?.navigationBar
         nvBar?.barStyle = .default

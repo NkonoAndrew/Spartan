@@ -37,13 +37,13 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
      */
     func fetchPosts() {
     posts.removeAll()
-    
-        db.collection("posts").getDocuments{ (snapshot, error) in
+      
+        db.collection("posts").order(by: "timeStamp", descending: true).getDocuments{ (querySnapshot, error) in
             if let err = error {
                 debugPrint("Error fetching does: \(err)")
             } else {
                 print("Sucessfully fetched posts.")
-                for document in snapshot!.documents {
+                for document in querySnapshot!.documents {
                     print("debug = \(document.data())")
                    // print("imageName = \(post.imageName)")
                     let newPost = Post(data: document.data())

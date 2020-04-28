@@ -16,17 +16,22 @@ class PostEventViewController: UIViewController,  UINavigationControllerDelegate
     
     let db = Firestore.firestore()
     let ui = UIController()
+    let datePicker = UIDatePicker()
+    
     var userNewPost: Post!
+    var curUser: User!
     
     @IBOutlet weak var eventNameTextField: UITextField!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postContentField:UITextView!
+    @IBOutlet weak var dateTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userNewPost = Post()
         self.setupKeyboardDismiss()
         self.postContentField.delegate = self
+        createDatePicker()
         setUI()
         
         // Do any additional setup after loading the view.
@@ -42,15 +47,64 @@ class PostEventViewController: UIViewController,  UINavigationControllerDelegate
     //add data to firebase
     @IBAction func touchPost(_ sender: Any) {
         uploadPostImage()
-        uploadPostData()
         navigateToHomeView()
     }
     
+    func createDatePicker(){
+        dateTextField.textAlignment = .center
+        // toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //bar button
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        dateTextField.inputAccessoryView = toolbar
+        
+        // assign date picker to the text field
+        dateTextField.inputView = datePicker
+        //  Format
+        datePicker.datePickerMode = .date
+    }
+    
+    @objc func donePressed(){
+        //  Format
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        dateTextField.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    
     func setUI(){
+        postImageView.image = UIImage(named: "sjsufootball")
         self.ui.setNavigationBarUI(vc: self)
         self.ui.setTextViewUI(view: postContentField)
         
     }
+    /**
+     Retrieve current user data
+     */
+    //    func initCurUserData() {
+    //        print("Initializing current user data.")
+    //        if let user = Auth.auth().currentUser {
+    //            let ref = Firestore.firestore().collection("users").document(user.uid)
+    //            ref.getDocument { document, error in
+    //
+    //                if let doc = document, document!.exists {
+    //                    if let data = doc.data() {
+    //                        self.curUser = User(data:data)
+    //                        //self.curUser.printUser()
+    //                    }
+    //                } else {
+    //                    print("Document does not exist.")
+    //                }
+    //            }
+    //        } else {
+    //            print("Currently has no user signed in.")
+    //        }
+    //    }
     
     func uploadPostData(){
         let doc = db.collection("posts").document()
@@ -58,7 +112,9 @@ class PostEventViewController: UIViewController,  UINavigationControllerDelegate
             //"context":self.contextField.text ?? "Default context",
             "eventName":self.eventNameTextField.text ?? "Default eventname",
             "imageName":userNewPost.imageName,
-            "content":self.postContentField.text ?? "Default content"
+            "content":self.postContentField.text ?? "Default content",
+            "eventDate":self.dateTextField.text ?? "Default eventdate",
+            "timeStamp":Timestamp()
         ]){ err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -92,10 +148,10 @@ class PostEventViewController: UIViewController,  UINavigationControllerDelegate
     func navigateToHomeView(){
         print("Navigated to Home View Controller!")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let tabbarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-                // Marked Line to ask system to use the old behavior: Full screen
-                tabbarVC.modalPresentationStyle = .fullScreen
-                self.present(tabbarVC, animated: false, completion: nil)
+        let tabbarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        // Marked Line to ask system to use the old behavior: Full screen
+        tabbarVC.modalPresentationStyle = .fullScreen
+        self.present(tabbarVC, animated: false, completion: nil)
     }
     /**
      Init image picker with alert controller.

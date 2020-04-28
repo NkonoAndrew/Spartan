@@ -1,7 +1,93 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hl0-xq-GYd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Alert View Controller-->
+        <scene sceneID="9k6-TZ-PX7">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hl0-xq-GYd" customClass="AlertViewController" customModule="SpartanNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vzN-Qd-oK2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg2-R0-IjF">
+                                <rect key="frame" x="69.5" y="311.5" width="275" height="273"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pq3-Zd-WHs">
+                                        <rect key="frame" x="72" y="210" width="137" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="137" id="Tnt-xj-6ji"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="WiO-gE-zu5"/>
+                                            <constraint firstAttribute="height" constant="30" id="sfh-gb-SyQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButton:" destination="Hl0-xq-GYd" eventType="touchUpInside" id="31R-vb-APP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Thank you for your feedback! We will be in touch with you soon!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fv-Qh-ako">
+                                        <rect key="frame" x="8" y="99" width="258" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="98" id="CEe-Mx-gpr"/>
+                                            <constraint firstAttribute="width" constant="258" id="ZvK-5s-kOw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="r3G-Bd-t8P">
+                                        <rect key="frame" x="40" y="0.0" width="195" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Fyd-gy-FIk"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Pq3-Zd-WHs" firstAttribute="leading" secondItem="xg2-R0-IjF" secondAttribute="leading" constant="72" id="1S4-HD-mdV"/>
+                                    <constraint firstAttribute="width" constant="275" id="2mw-RZ-Icd"/>
+                                    <constraint firstItem="1Fv-Qh-ako" firstAttribute="centerY" secondItem="xg2-R0-IjF" secondAttribute="centerY" id="4JP-QJ-gYY"/>
+                                    <constraint firstItem="1Fv-Qh-ako" firstAttribute="leading" secondItem="xg2-R0-IjF" secondAttribute="leading" constant="15" id="Kmc-V8-tQS"/>
+                                    <constraint firstAttribute="trailing" secondItem="r3G-Bd-t8P" secondAttribute="trailing" constant="40" id="TkL-zg-iDr"/>
+                                    <constraint firstItem="Pq3-Zd-WHs" firstAttribute="top" secondItem="1Fv-Qh-ako" secondAttribute="bottom" constant="36" id="UNk-Nh-bk3"/>
+                                    <constraint firstItem="r3G-Bd-t8P" firstAttribute="leading" secondItem="xg2-R0-IjF" secondAttribute="leading" constant="40" id="W6U-hQ-tL9"/>
+                                    <constraint firstItem="1Fv-Qh-ako" firstAttribute="centerX" secondItem="xg2-R0-IjF" secondAttribute="centerX" id="dOh-7i-MMP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pq3-Zd-WHs" secondAttribute="trailing" constant="72" id="jDz-Zo-dOA"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pq3-Zd-WHs" secondAttribute="bottom" constant="33" id="kVH-3H-iYt"/>
+                                    <constraint firstItem="1Fv-Qh-ako" firstAttribute="top" secondItem="r3G-Bd-t8P" secondAttribute="bottom" constant="16" id="pV2-eq-Ex2"/>
+                                    <constraint firstItem="r3G-Bd-t8P" firstAttribute="top" secondItem="xg2-R0-IjF" secondAttribute="top" id="qQr-41-6zk"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Fv-Qh-ako" secondAttribute="trailing" constant="8" id="u9f-mc-Ugd"/>
+                                    <constraint firstItem="Pq3-Zd-WHs" firstAttribute="top" secondItem="1Fv-Qh-ako" secondAttribute="bottom" constant="36" id="yJ4-t9-IEy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="xg2-R0-IjF" firstAttribute="centerY" secondItem="vzN-Qd-oK2" secondAttribute="centerY" id="GPy-fI-9kP"/>
+                            <constraint firstItem="xg2-R0-IjF" firstAttribute="centerX" secondItem="vzN-Qd-oK2" secondAttribute="centerX" id="MRN-xe-emz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sNj-XS-Vy1"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertTextLabel" destination="1Fv-Qh-ako" id="f9G-X0-ClN"/>
+                        <outlet property="alertView" destination="xg2-R0-IjF" id="Eaf-6S-XFI"/>
+                        <outlet property="successImg" destination="r3G-Bd-t8P" id="r61-1i-IEj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z6L-qd-XYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407.24637681159425" y="-222.32142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="success" width="860" height="899"/>
+    </resources>
 </document>
