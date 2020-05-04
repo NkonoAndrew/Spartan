@@ -29,15 +29,13 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchPosts()
-        
-        // Do any additional setup after loading the view.
     }
     /**
      Read data from database
      */
     func fetchPosts() {
-    posts.removeAll()
-      
+        posts.removeAll()
+        
         db.collection("posts").order(by: "timeStamp", descending: true).getDocuments{ (querySnapshot, error) in
             if let err = error {
                 debugPrint("Error fetching does: \(err)")
@@ -45,7 +43,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 print("Sucessfully fetched posts.")
                 for document in querySnapshot!.documents {
                     print("debug = \(document.data())")
-                   // print("imageName = \(post.imageName)")
+                    // print("imageName = \(post.imageName)")
                     let newPost = Post(data: document.data())
                     self.posts.append(newPost)
                     newPost.printPost()
@@ -82,7 +80,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         // TODO:
         //  cell.configureCell(post: posts[indexPath.row])
-       // cell.postContent.tag = indexPath.row
+        // cell.postContent.tag = indexPath.row
         if (posts.count >= 1) {
             let curPost = posts[indexPath.row]
             cell.setPost(post: curPost)
@@ -91,31 +89,31 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         return cell
     }
-     //MARK: UIScrollView Delegate
-        func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            let offsetY = scrollView.contentOffset.y
-            let contentHeight = scrollView.contentSize.height
-            if offsetY > contentHeight - scrollView.frame.height {
-//                if !isFetching {
-//                    fetchPosts()
-                    self.ui.setTableActicityIndicator(tv: eventTable, isTop: false)
-//                }
-            }
+    //MARK: UIScrollView Delegate
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.height {
+            //                if !isFetching {
+            //                    fetchPosts()
+            self.ui.setTableActicityIndicator(tv: eventTable, isTop: false)
+            //                }
         }
+    }
     
-        func scrollViewWillEndDragging(_ scrollView: UIScrollView,
-                                       withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-            if (velocity.y > 0) {
-                self.navigationController?.setNavigationBarHidden(true, animated: true)
-                if let nc = self.navigationController {
-                    self.ui.setTransparentNavigationBar(nc: nc)
-                }
-            } else {
-                self.navigationController?.setNavigationBarHidden(false, animated: true)
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView,
+                                   withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if (velocity.y > 0) {
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+            if let nc = self.navigationController {
+                self.ui.setTransparentNavigationBar(nc: nc)
             }
+        } else {
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
         }
-        
-        func fetch_Post(){
+    }
+    
+    func fetch_Post(){
         isFetching = true
         self.fetchPosts()
     }

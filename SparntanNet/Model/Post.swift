@@ -69,7 +69,7 @@ class Post {
         print("uID: \(self.uID)")
         print("eventname: \(self.eventName)")
         print("imageName: \(self.imageName)")
-         print("eventDate: \(self.eventDate)")
+        print("eventDate: \(self.eventDate)")
         print("content: \(self.content)")
         
         print("=======================")

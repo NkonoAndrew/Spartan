@@ -40,8 +40,15 @@ class UIController {
         imageView.image = image
         vc.navigationItem.titleView = imageView
     }
+    func setCircularView(view: UIImageView) {
+        view.layer.borderWidth = 1
+        view.layer.masksToBounds = false
+        view.layer.borderColor = UIColor.white.cgColor
+        view.layer.cornerRadius = view.frame.height / 2
+        view.clipsToBounds = true
+    }
     
-       func setTextViewUI(view: UITextView) {
+    func setTextViewUI(view: UITextView) {
         view.text = self.DETAILS_PLACE_HOLDER
         view.textColor = UIColor.lightGray
         view.layer.borderWidth = 1
@@ -53,6 +60,14 @@ class UIController {
         nc.navigationBar.shadowImage = UIImage()
         nc.navigationBar.isTranslucent = true
         nc.view.backgroundColor = .clear
+    }
+    func setProfileView(view: UIImageView) {
+        view.layer.borderWidth = 4
+        view.layer.borderColor = UIColor.white.cgColor
+        view.layer.shadowRadius = 10
+        view.layer.masksToBounds = false
+        view.clipsToBounds = true
+        view.layer.cornerRadius = view.frame.height / 2
     }
     
     func resized(view: UIImageView, targetSize: CGSize) -> UIImage? {

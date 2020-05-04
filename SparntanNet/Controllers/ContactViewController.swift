@@ -27,6 +27,7 @@ class ContactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Contact"
+        self.setupKeyboardDismiss()
         setUpElements()
         setUI()
         // Do any additional setup after loading the view.
@@ -96,6 +97,11 @@ class ContactViewController: UIViewController {
     func showError(_ message:String){
         ErrorLabel.text  = message
         ErrorLabel.alpha = 1
+    }
+    func setupKeyboardDismiss() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
     }
     
     
