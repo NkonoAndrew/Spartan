@@ -8,12 +8,16 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import AVFoundation
 import GoogleSignIn
+import FacebookLogin
+import FacebookCore
 import FBSDKCoreKit
-import FBSDKLoginKit
 
 class ViewController: UIViewController, GIDSignInDelegate{
+    
+    
 
     var videoPlayer: AVPlayer?
     var videoPlayerLayer: AVPlayerLayer?
@@ -43,15 +47,11 @@ class ViewController: UIViewController, GIDSignInDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if let token = AccessToken.current,
-            !token.isExpired {
-            // User is logged in, do work such as go to next view controller.
+        if let acessToken = AccessToken.current,
+            !acessToken.isExpired {
+        print("User already logged into facebook")
+        print(acessToken)
         }
-        let loginButton = FBLoginButton()
-        loginButton.center = view.center
-        view.addSubview(loginButton)
-        loginButton.permissions = ["public_profile", "email"]
-
         
         GIDSignIn.sharedInstance().presentingViewController = self
         GIDSignIn.sharedInstance()?.signIn()
@@ -109,8 +109,42 @@ class ViewController: UIViewController, GIDSignInDelegate{
         }
     }
     
-    
-    
-    
+    @IBAction func fbAction(_ sender: Any) {
+            let loginManager = LoginManager()
+            loginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
+                if let error = error {
+                    print("Failed to login: \(error.localizedDescription)")
+                    return
+                }
+                
+                guard let accessToken = AccessToken.current else {
+                    print("Failed to get access token")
+                    return
+                }
+     
+                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+                
+                // Perform login by calling Firebase APIs
+                Auth.auth().signIn(with: credential, completion: { (user, error) in
+                    if let error = error {
+                        print("Login error: \(error.localizedDescription)")
+                        let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                        let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alertController.addAction(okayAction)
+                        self.present(alertController, animated: true, completion: nil)
+                        return
+                    }else {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let tabbarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+                        // Marked Line to ask system to use the old behavior: Full screen
+                        tabbarVC.modalPresentationStyle = .fullScreen
+                        self.present(tabbarVC, animated: false, completion: nil)
+                    }
+                
+                })
+     
+            }
+        }
+
 }
 
