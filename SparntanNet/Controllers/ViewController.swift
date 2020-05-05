@@ -8,11 +8,15 @@
 
 import UIKit
 import Firebase
+import AVFoundation
 import GoogleSignIn
 import FBSDKCoreKit
 import FBSDKLoginKit
 
 class ViewController: UIViewController, GIDSignInDelegate{
+
+    var videoPlayer: AVPlayer?
+    var videoPlayerLayer: AVPlayerLayer?
     
     @IBOutlet weak var signUpButton: UIButton!
     
@@ -56,10 +60,43 @@ class ViewController: UIViewController, GIDSignInDelegate{
         setUpElements()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        // set up video player in the background
+        setUpVideo()
+}
     
     func setUpElements(){
         UIController.styleFilledButton(signUpButton)
         UIController.styleHollowButton(loginButton)
+    }
+    
+    func setUpVideo(){
+        // Get the path to the resource in the boundle
+        guard let path = Bundle.main.path(forResource: "intro", ofType: "mov") else{
+            return
+        }
+        // Create a URL from it
+        let url = URL(fileURLWithPath: path)
+        
+        // Create the video player item
+        let item = AVPlayerItem(url: url)
+        
+        // Create the player
+        videoPlayer = AVPlayer(playerItem: item)
+        
+        // Create the layer
+        videoPlayerLayer = AVPlayerLayer(player: videoPlayer!)
+        
+        // Adjust the size and frame
+        
+//        videoPlayerLayer?.frame = CGRect(x: -self.view.frame.size.width*1.5, y: 0, width: self.view.frame.size.width*4, height: self.view.frame.size.height)
+
+        videoPlayerLayer!.frame = self.view.bounds
+        videoPlayerLayer!.videoGravity = .resizeAspectFill
+        
+          // add to the view and play it
+        view.layer.insertSublayer(videoPlayerLayer!, at: 0)
+        videoPlayer?.playImmediately(atRate: 0.3)
     }
     
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,

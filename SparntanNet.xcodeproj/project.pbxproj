@@ -11,6 +11,7 @@
 		45271E172457C4DE00A94A87 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45271E162457C4DE00A94A87 /* AlertService.swift */; };
 		45271E192457C6C600A94A87 /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45271E182457C6C600A94A87 /* AlertStoryboard.storyboard */; };
 		45271E1F2457C7B000A94A87 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45271E1E2457C7B000A94A87 /* AlertViewController.swift */; };
+		45415E3C245BBF8100376BA5 /* intro.mov in Resources */ = {isa = PBXBuildFile; fileRef = 45415E3B245BBF8100376BA5 /* intro.mov */; };
 		4597A53C2446BA6C009D2C09 /* PostEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597A53B2446BA6C009D2C09 /* PostEventViewController.swift */; };
 		4597A53E2446BCF9009D2C09 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597A53D2446BCF9009D2C09 /* HomeTableViewCell.swift */; };
 		4597A5402446BD2B009D2C09 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597A53F2446BD2B009D2C09 /* Post.swift */; };
@@ -25,6 +26,9 @@
 		45C228C5244696AF009BD298 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C4244696AF009BD298 /* LoginViewController.swift */; };
 		45C228C7244696C2009BD298 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C6244696C2009BD298 /* SignUpViewController.swift */; };
 		45C228C9244696D9009BD298 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C228C8244696D9009BD298 /* ContactViewController.swift */; };
+		45D49BD2245BDF3C004AE8C6 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D49BD1245BDF3C004AE8C6 /* UserProfileViewController.swift */; };
+		45D49BD4245BEA42004AE8C6 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D49BD3245BEA42004AE8C6 /* EditProfileVC.swift */; };
+		45D49BD6245BEF35004AE8C6 /* User .swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D49BD5245BEF35004AE8C6 /* User .swift */; };
 		45D84CB42455295300A2A292 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D84CB32455295300A2A292 /* Contact.swift */; };
 		6A73662CE2966982A2DF2302 /* Pods_SparntanNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D8CDB252C9C4CA23C0F9EC /* Pods_SparntanNet.framework */; };
 		759F200824565CD000F5488E /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 759F200724565CD000F5488E /* FacebookShare */; };
@@ -39,6 +43,7 @@
 		45271E162457C4DE00A94A87 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		45271E182457C6C600A94A87 /* AlertStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertStoryboard.storyboard; sourceTree = "<group>"; };
 		45271E1E2457C7B000A94A87 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		45415E3B245BBF8100376BA5 /* intro.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = intro.mov; sourceTree = "<group>"; };
 		4597A53B2446BA6C009D2C09 /* PostEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEventViewController.swift; sourceTree = "<group>"; };
 		4597A53D2446BCF9009D2C09 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTableViewCell.swift; path = SparntanNet/View/HomeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		4597A53F2446BD2B009D2C09 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -55,6 +60,9 @@
 		45C228C4244696AF009BD298 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		45C228C6244696C2009BD298 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		45C228C8244696D9009BD298 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		45D49BD1245BDF3C004AE8C6 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		45D49BD3245BEA42004AE8C6 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileVC.swift; path = SparntanNet/EditProfileVC.swift; sourceTree = SOURCE_ROOT; };
+		45D49BD5245BEF35004AE8C6 /* User .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User .swift"; sourceTree = "<group>"; };
 		45D84CB32455295300A2A292 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		53CCFA97F8C8C19C8A002CC1 /* Pods-SparntanNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparntanNet.debug.xcconfig"; path = "Target Support Files/Pods-SparntanNet/Pods-SparntanNet.debug.xcconfig"; sourceTree = "<group>"; };
 		759F200F24566C4C00F5488E /* SpartanNet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpartanNet.entitlements; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 				45C228C024468FFD009BD298 /* View */,
 				45C228C124469007009BD298 /* Controllers */,
 				45C228B024468903009BD298 /* Assets.xcassets */,
+				45415E3B245BBF8100376BA5 /* intro.mov */,
 				45C228B524468903009BD298 /* Info.plist */,
 				45C228BC24468BA4009BD298 /* GoogleService-Info.plist */,
 			);
@@ -126,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				4597A53F2446BD2B009D2C09 /* Post.swift */,
+				45D49BD5245BEF35004AE8C6 /* User .swift */,
 				45D84CB32455295300A2A292 /* Contact.swift */,
 				4503D0CE244BAFB8007F860C /* UIController.swift */,
 			);
@@ -143,6 +153,7 @@
 		45C228C124469007009BD298 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				45D49BD3245BEA42004AE8C6 /* EditProfileVC.swift */,
 				45C228AB24468901009BD298 /* ViewController.swift */,
 				45C228C22446969B009BD298 /* HomeViewController.swift */,
 				45C228C4244696AF009BD298 /* LoginViewController.swift */,
@@ -150,6 +161,7 @@
 				45C228C6244696C2009BD298 /* SignUpViewController.swift */,
 				45C228C8244696D9009BD298 /* ContactViewController.swift */,
 				4597A53B2446BA6C009D2C09 /* PostEventViewController.swift */,
+				45D49BD1245BDF3C004AE8C6 /* UserProfileViewController.swift */,
 				45271E1E2457C7B000A94A87 /* AlertViewController.swift */,
 			);
 			path = Controllers;
@@ -239,6 +251,7 @@
 				45C228B124468903009BD298 /* Assets.xcassets in Resources */,
 				45C228AF24468901009BD298 /* Main.storyboard in Resources */,
 				45271E192457C6C600A94A87 /* AlertStoryboard.storyboard in Resources */,
+				45415E3C245BBF8100376BA5 /* intro.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,18 +322,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D84CB42455295300A2A292 /* Contact.swift in Sources */,
+				45D49BD2245BDF3C004AE8C6 /* UserProfileViewController.swift in Sources */,
 				45271E1F2457C7B000A94A87 /* AlertViewController.swift in Sources */,
 				45C228C7244696C2009BD298 /* SignUpViewController.swift in Sources */,
 				45271E172457C4DE00A94A87 /* AlertService.swift in Sources */,
 				45C228C9244696D9009BD298 /* ContactViewController.swift in Sources */,
 				45C228AC24468901009BD298 /* ViewController.swift in Sources */,
 				45C228A824468901009BD298 /* AppDelegate.swift in Sources */,
+				45D49BD6245BEF35004AE8C6 /* User .swift in Sources */,
 				45C228AA24468901009BD298 /* SceneDelegate.swift in Sources */,
 				4503D0CF244BAFB8007F860C /* UIController.swift in Sources */,
 				45C228C5244696AF009BD298 /* LoginViewController.swift in Sources */,
 				4597A53E2446BCF9009D2C09 /* HomeTableViewCell.swift in Sources */,
 				45C228C32446969B009BD298 /* HomeViewController.swift in Sources */,
 				4597A53C2446BA6C009D2C09 /* PostEventViewController.swift in Sources */,
+				45D49BD4245BEA42004AE8C6 /* EditProfileVC.swift in Sources */,
 				4597A5402446BD2B009D2C09 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

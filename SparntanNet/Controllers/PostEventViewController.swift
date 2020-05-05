@@ -33,8 +33,6 @@ class PostEventViewController: UIViewController,  UINavigationControllerDelegate
         self.postContentField.delegate = self
         createDatePicker()
         setUI()
-        
-        // Do any additional setup after loading the view.
     }
     
     /**
@@ -51,7 +49,7 @@ class PostEventViewController: UIViewController,  UINavigationControllerDelegate
     }
     
     func createDatePicker(){
-        dateTextField.textAlignment = .center
+        dateTextField.textAlignment = .left
         // toolbar
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -109,7 +107,7 @@ class PostEventViewController: UIViewController,  UINavigationControllerDelegate
     func uploadPostData(){
         let doc = db.collection("posts").document()
         doc.setData([
-            //"context":self.contextField.text ?? "Default context",
+            //"context":self.contextFText(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)ield.text ?? "Default context",
             "eventName":self.eventNameTextField.text ?? "Default eventname",
             "imageName":userNewPost.imageName,
             "content":self.postContentField.text ?? "Default content",
